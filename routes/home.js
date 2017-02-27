@@ -23,7 +23,7 @@ exports.get = async (ctx) => {
     }
     await rp(options).then(response => {
       var options2 = {
-        method: GET,
+        method: 'GET',
         uri: 'https://api.vk.com/method/users.get',
         qs: {
           user_ids: response.user_id,
@@ -32,7 +32,7 @@ exports.get = async (ctx) => {
         },
         json: true
       }
-      rp(options)
+      rp(options2)
     }).then(respose => {console.log('works')});
 
      try {
