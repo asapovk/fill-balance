@@ -15,10 +15,10 @@ block content
             ul.nav.navbar-nav.navbar-right
               li
                 a(href="#")#fillBalance Баланс: &nbsp
-              if user
+              if userId
                 li.dropdown
                   a( class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
-                    i(class="fa fa-user" aria-hidden="true") &nbsp #{user.displayName}
+                    i(class="fa fa-user" aria-hidden="true") &nbsp #{userId}
                     span.caret
                   ul.dropdown-menu
                     li
