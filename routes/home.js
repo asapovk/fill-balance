@@ -16,7 +16,7 @@ exports.get = async (ctx) => {
       qs: {
         client_id: '5895475',
         client_secret: 'CWWUwXFXOOw1UCJXIjef',
-        redirect_uri: 'http://oknojapan.com/',
+        redirect_uri: 'http://oknojapan.com:3000/',
         code: code
       },
       json: true
