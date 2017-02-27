@@ -21,10 +21,23 @@ exports.get = async (ctx) => {
       },
       json: true
     }
-    await rp(options).then(respose => {console.log(respose.user_id)});
+    await rp(options).then(response => {
+      var options2 = {
+        method: GET,
+        uri: 'https://api.vk.com/method/users.get',
+        qs: {
+          user_ids: response.user_id,
+          fields: 'bdate',
+          v: '5.62'
+        },
+        json: true
+      }
+      rp(options)
+    }).then(respose => {console.log('works')});
+
      try {
           var user_id = respose.user_id;
-      } catch(e) {} 
+      } catch(e) {}
     ctx.body = ctx.render('templates/home',{userId: user_id });
   }
 
