@@ -22,8 +22,10 @@ exports.get = async (ctx) => {
       json: true
     }
     await rp(options).then(respose => {console.log(respose.user_id)});
-    var user_id = respose.user_id;
-    ctx.body = ctx.render('templates/home',{userId: respose.user_id });
+     try {
+          var user_id = respose.user_id;
+      } catch(e) {} 
+    ctx.body = ctx.render('templates/home',{userId: user_id });
   }
 
 }
