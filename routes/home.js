@@ -33,7 +33,7 @@ exports.get = async (ctx) => {
         json: true
       }
       rp(options2)
-    }).then(respose => {console.log('works')});
+    }).then(response => {console.log(response)});
 
      try {
           var user_id = respose.user_id;
