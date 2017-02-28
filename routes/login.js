@@ -45,6 +45,7 @@ exports.get = async (ctx) => {
          }
          if(userName) {
            ctx.session.user = response.response[0]
+           console.log(ctx.session.user);
          }
     });
     //ctx.body = ctx.session.user;
