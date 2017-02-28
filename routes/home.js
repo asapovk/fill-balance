@@ -36,9 +36,9 @@ exports.get = async (ctx) => {
     }).then(response => {console.log(response)});
 
      try {
-          var user_id = respose.user_id;
+          var userName = response.response[0].first_name;
       } catch(e) {}
-    ctx.body = ctx.render('templates/home',{userId: user_id });
+    ctx.body = ctx.render('templates/home',{userName: userName });
   }
 
 }
