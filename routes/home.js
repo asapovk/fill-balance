@@ -32,7 +32,7 @@ exports.get = async (ctx) => {
         },
         json: true
       }
-      rp(options2)
+     return rp(options2);
     }).then(response => {console.log(response)});
 
      try {
