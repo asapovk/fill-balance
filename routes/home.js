@@ -1,6 +1,6 @@
 exports.get = async (ctx) => {
 
-    var user = ctx.session.user || null;  
+    var user = ctx.session.user || null;
 
-    ctx.body = ctx.render('templates/home', user: user);
+    ctx.body = ctx.render('templates/home', {user: user});
 }
