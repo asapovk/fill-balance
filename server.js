@@ -19,9 +19,11 @@ Code here ...
 */
 
 router.get('/', require('./routes/home.js').get);
+router.get('/',require('./routes/login.js').get);
 
 app.use(router.routes());
 
+app.keys = ['some secret hurr'];
 app.listen('3000', ()=>{
     console.log('listening port 3000');
 });
