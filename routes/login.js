@@ -47,7 +47,8 @@ exports.get = async (ctx) => {
            ctx.session.user = response.response[0]
          }
     });
-    ctx.body = ctx.session.user;
+    //ctx.body = ctx.session.user;
+    ctx.redirect('/');
   }
 
 }

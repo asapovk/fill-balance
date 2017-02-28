@@ -20,6 +20,7 @@ Code here ...
 
 router.get('/', require('./routes/home.js').get);
 router.get('/login',require('./routes/login.js').get);
+router.get('/logout', require('./routes/logout.js').get);
 
 app.use(router.routes());
 
