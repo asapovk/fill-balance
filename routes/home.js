@@ -21,6 +21,7 @@ exports.get = async (ctx) => {
       },
       json: true
     }
+    var userName;
     await rp(options).then(response => {
       var options2 = {
         method: 'GET',
@@ -33,11 +34,14 @@ exports.get = async (ctx) => {
         json: true
       }
      return rp(options2);
-    }).then(response => {console.log(response)});
-
-     try {
-          var userName = response.response[0].first_name;
-      } catch(e) {}
+    }).then(response => {
+        console.log(response)
+        try {
+             userName = response.response[0].first_name;
+         } catch(e) {
+           console.log('failed to set userName');
+         }
+    });
     ctx.body = ctx.render('templates/home',{userName: userName });
   }
 
