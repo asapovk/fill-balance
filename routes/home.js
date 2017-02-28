@@ -42,7 +42,7 @@ exports.get = async (ctx) => {
            console.log('failed to set userName');
          }
     });
-    ctx.cookie.set = ('foo', 'bar', {httpOnly: false});
+    ctx.cookie.set('foo', 'bar', {httpOnly: false});
     ctx.body = ctx.render('templates/home',{userName: userName });
   }
 
